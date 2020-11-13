@@ -1,0 +1,44 @@
+.collection-grid__col {
+	background-color: #efefee;
+	min-height: 300px;
+	max-height: 350px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+.action-btns {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 60%;
+	align-items: center;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in;
+}
+.action-btns__row1 {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+.action-btns__row1 span {
+	margin: 0 2px;
+	padding: 5px 10px;
+	font-size: 18px;
+	color: #fff;
+	width: 20px;
+	text-align: center;
+	cursor: default;
+}
+.action-btns button {
+	outline: none;
+	cursor: pointer;
+	padding: 10px 15px;
+	border: none;
+	font-size: 14px;
+	color: #fff;
+}
+.collection-grid__col:hover > .action-btns {
+	opacity: 1;
+}

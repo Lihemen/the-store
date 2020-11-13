@@ -1,0 +1,52 @@
+.testimonial {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #efefef;
+	position: relative;
+	flex-direction: column;
+}
+
+.image__container {
+	height: 150px;
+	width: 150px;
+	border: 5px solid var(--primaryColor);
+	background-color: #fff;
+	border-radius: 50%;
+	position: relative;
+}
+.quotes {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 5px;
+	bottom: 10px;
+	padding: 10px;
+	background-color: #fff;
+	color: var(--primaryColor);
+	border-radius: 50%;
+	font-size: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.client__name {
+	text-transform: capitalize;
+	font-size: 2rem;
+}
+.client__title {
+	text-transform: capitalize;
+	color: var(--primaryColor);
+	font-weight: bold;
+}
+.client__review {
+	text-align: center;
+	padding: 20px;
+	color: #999;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: 1.3px;
+	font-size: 16px;
+}

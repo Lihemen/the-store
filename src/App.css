@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--primaryColor: rgba(21, 180, 56, 0.795);
+}
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-track {
+	background-color: #ddd;
+}
+::-webkit-scrollbar-button {
+	height: 50px;
+	background-color: #000;
+}
+::-webkit-scrollbar-thumb {
+	min-height: 50px;
+	background-color: var(--primaryColor);
+}
+
+body {
+	box-sizing: border-box;
+	display: block;
+	letter-spacing: 1.2;
+	font-size: 14px;
+	line-height: 1.6;
+}
+.text__primary {
+	color: var(--primaryColor);
+}
+.bg__primary {
+	background-color: var(--primaryColor);
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}

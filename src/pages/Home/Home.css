@@ -1,0 +1,185 @@
+.banner {
+	display: flex;
+	background-color: #efefef;
+	height: 420px;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	line-height: 1.7;
+}
+.banner img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+.banner__text {
+	z-index: 10;
+	width: 60%;
+	position: relative;
+	height: 40%;
+	animation-name: banner_text_animate;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+}
+.banner__title {
+	font-size: 2.5rem;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	text-transform: capitalize;
+}
+.banner__subtitle {
+	font-size: 15px;
+	margin-bottom: 2rem;
+}
+.banner__link {
+	border: 1px solid var(--primaryColor);
+	color: var(--primaryColor);
+	padding: 10px 15px;
+	text-transform: capitalize;
+	text-decoration: none;
+	max-width: 250px;
+}
+
+@keyframes banner_text_animate {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.featured-products {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem 0 2rem 0;
+}
+.featured-products__grid {
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	column-gap: 2rem;
+	row-gap: 1rem;
+}
+.collection,
+.carousel-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.carousel-container {
+	position: relative;
+	margin-bottom: 2rem;
+}
+.collection__title {
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	padding: 1rem 0;
+}
+.collection-grid__filters {
+	display: flex;
+	align-items: center;
+}
+.collection-grid__filters span {
+	margin-left: 20px;
+	color: #454;
+	font-size: 14px;
+	cursor: pointer;
+	text-align: center;
+	transition: color 0.4s ease-in;
+}
+.collection-grid__filters span:hover {
+	color: var(--primaryColor);
+}
+.collection-grid,
+.grid-carousel {
+	padding: 1rem 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 1.5rem;
+	row-gap: 2rem;
+	width: 80%;
+}
+.grid-carousel {
+	width: 90%;
+}
+.carousel__subtitle {
+	color: #aba;
+}
+.carousel__title {
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+}
+@media screen and (max-width: 400px) {
+	.collection-grid,
+	.grid-carousel {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+@media screen and (min-width: 401px) and (max-width: 980px) {
+	.collection-grid,
+	.grid-carousel {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media screen and (min-width: 981px) and (max-width: 1199px) {
+	.collection-grid,
+	.grid-carousel {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+.grid__link {
+	border: 1px solid var(--primaryColor);
+	color: var(--primaryColor);
+	padding: 10px 15px;
+	text-transform: capitalize;
+	text-decoration: none;
+	transition: all 0.6s linear;
+	max-width: 250px;
+}
+.grid__link:hover {
+	color: #fff;
+	background-color: var(--primaryColor);
+}
+.arrow__left,
+.arrow__right {
+	border: 1px solid rgb(190, 190, 190);
+	padding: 15px;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+}
+.arrow__left {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+}
+.arrow__right {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+}
+.carousel-container:hover .arrow__left,
+.carousel-container:hover .arrow__right {
+	opacity: 1;
+}
+
+@media screen and (max-width: 898px) {
+	.arrow__left,
+	.arrow__right {
+		opacity: 0 !important;
+	}
+}
+.testimonials {
+	height: 80vh;
+	margin: 2rem 0;
+}
